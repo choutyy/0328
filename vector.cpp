@@ -1,18 +1,20 @@
 #include <iostream>
 
 class Vector{
+    public:
     int x;
     int y;
-    double length(int, int);
-    int normalize(int, int);
+    double length();
+    Vector normalize();
 };
 
-double Vector::length(int x, int y){
-    return (x^2+y^2);
+double Vector::length(){
+    return (x^x+y^y);
 }
 
-int Vector::normalize(int x, int y){
-    return 1; 
+Vector Vector::normalize(){
+    double Len = length(); 
+    return {x = x/Len, y = y/Len}; 
 }
 
 int main(){
